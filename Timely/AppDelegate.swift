@@ -11,10 +11,53 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+	let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
+	let popover = NSPopover()
+	var eventMonitor: EventMonitor?
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Insert code here to initialize your application
+		if let button = statusItem.button {
+			button.image = NSImage(named: "StatusBarButtonImage")
+			button.action = #selector(togglePopover(sender:))
+		}
+		
+		popover.contentViewController = TimelyViewController(nibName: "TimelyViewController", bundle: nil)
+		
+		
+		eventMonitor = EventMonitor(mask: .leftMouseDown, handler: { [unowned self] (event) in
+			if (self.popover.isShown) {
+				self.closePopover(event)
+			}
+		})
+		eventMonitor?.start()
+	}
+	
+	func togglePopover(sender: AnyObject?) {
+		if(popover.isShown) {
+			closePopover(sender)
+		}else{
+			showPopover(sender)
+		}
+	}
+	
+	func closePopover(_ sender: AnyObject?) {
+		popover.performClose(sender)
+		eventMonitor?.stop()
+	}
+	
+	func showPopover(_ sender: AnyObject?) {
+		if let button = statusItem.button {
+			popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+		}
+		eventMonitor?.start()
+	}
+	
+	func printQuote(sender: AnyObject){
+		let quoteText = "Never put off until tomorrow what you can do the day after tomorrow."
+		let quoteAuthor = "Mark Twain"
+		
+		print("\(quoteText) - \(quoteAuthor)")
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {

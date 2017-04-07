@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		14ABE0C31E973E6C002A046F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0C21E973E6C002A046F /* AppDelegate.swift */; };
-		14ABE0C51E973E6C002A046F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0C41E973E6C002A046F /* ViewController.swift */; };
 		14ABE0C81E973E6C002A046F /* Timely.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0C61E973E6C002A046F /* Timely.xcdatamodeld */; };
 		14ABE0CA1E973E6C002A046F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0C91E973E6C002A046F /* Assets.xcassets */; };
 		14ABE0CD1E973E6C002A046F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0CB1E973E6C002A046F /* Main.storyboard */; };
 		14ABE0D81E973E6C002A046F /* TimelyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0D71E973E6C002A046F /* TimelyTests.swift */; };
 		14ABE0E31E973E6C002A046F /* TimelyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0E21E973E6C002A046F /* TimelyUITests.swift */; };
+		14ABE0F21E9746D9002A046F /* TimelyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F01E9746D8002A046F /* TimelyViewController.swift */; };
+		14ABE0F31E9746D9002A046F /* TimelyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0F11E9746D9002A046F /* TimelyViewController.xib */; };
+		14ABE0F51E974F5E002A046F /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F41E974F5E002A046F /* EventMonitor.swift */; };
+		14ABE0F71E976C3F002A046F /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F61E976C3F002A046F /* Timer.swift */; };
+		14ABE0F91E97854F002A046F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F81E97854F002A046F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		14ABE0BF1E973E6C002A046F /* Timely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14ABE0C21E973E6C002A046F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14ABE0C41E973E6C002A046F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		14ABE0C71E973E6C002A046F /* Timely.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Timely.xcdatamodel; sourceTree = "<group>"; };
 		14ABE0C91E973E6C002A046F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14ABE0CC1E973E6C002A046F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		14ABE0DE1E973E6C002A046F /* TimelyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14ABE0E21E973E6C002A046F /* TimelyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyUITests.swift; sourceTree = "<group>"; };
 		14ABE0E41E973E6C002A046F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14ABE0F01E9746D8002A046F /* TimelyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelyViewController.swift; sourceTree = "<group>"; };
+		14ABE0F11E9746D9002A046F /* TimelyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelyViewController.xib; sourceTree = "<group>"; };
+		14ABE0F41E974F5E002A046F /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		14ABE0F61E976C3F002A046F /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		14ABE0F81E97854F002A046F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				14ABE0C21E973E6C002A046F /* AppDelegate.swift */,
-				14ABE0C41E973E6C002A046F /* ViewController.swift */,
+				14ABE0F41E974F5E002A046F /* EventMonitor.swift */,
+				14ABE0F81E97854F002A046F /* Constants.swift */,
+				14ABE0F61E976C3F002A046F /* Timer.swift */,
+				14ABE0F01E9746D8002A046F /* TimelyViewController.swift */,
+				14ABE0F11E9746D9002A046F /* TimelyViewController.xib */,
 				14ABE0C91E973E6C002A046F /* Assets.xcassets */,
 				14ABE0CB1E973E6C002A046F /* Main.storyboard */,
 				14ABE0CE1E973E6C002A046F /* Info.plist */,
@@ -235,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14ABE0F31E9746D9002A046F /* TimelyViewController.xib in Resources */,
 				14ABE0CA1E973E6C002A046F /* Assets.xcassets in Resources */,
 				14ABE0CD1E973E6C002A046F /* Main.storyboard in Resources */,
 			);
@@ -261,9 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14ABE0F21E9746D9002A046F /* TimelyViewController.swift in Sources */,
+				14ABE0F51E974F5E002A046F /* EventMonitor.swift in Sources */,
 				14ABE0C81E973E6C002A046F /* Timely.xcdatamodeld in Sources */,
-				14ABE0C51E973E6C002A046F /* ViewController.swift in Sources */,
+				14ABE0F71E976C3F002A046F /* Timer.swift in Sources */,
 				14ABE0C31E973E6C002A046F /* AppDelegate.swift in Sources */,
+				14ABE0F91E97854F002A046F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
