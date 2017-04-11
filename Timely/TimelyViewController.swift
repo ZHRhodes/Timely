@@ -7,28 +7,48 @@
 //
 
 import Cocoa
+import AVFoundation //pull this out?
 
-class TimelyViewController: NSViewController {
+protocol TimerUIDelegate: class {
+	func timeUpdate(seconds: Int)
+}
+
+class TimelyViewController: NSViewController, AVAudioPlayerDelegate {
 
 	@IBOutlet var slider: NSSlider!
-	var timer: CountdownTimer = CountdownTimer()
+	var timer: TimelyTimer?
+	var running: Bool = false
 	
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-		NotificationCenter.default.addObserver(self, selector: #selector(TimelyViewController.alarm), name: NSNotification.Name(Constants.strings.countdownZero), object: nil)
     }
 	
 	@IBAction func sliderChanged(_ sender: Any) {
 		print("slider changed value \(slider.intValue)")
-		timer.reset(withNewValue: Int(slider.intValue))
+		timer = nil
+		running = false
 	}
 	
 	@IBAction func toggleTimer(_ sender: Any) {
-		timer.toggleTimer()
+		if(running){
+			timer?.stop()
+		}else{
+			if(timer == nil){
+				timer = CountdownTimer(withTime: Int(slider.intValue))
+				timer?.setDelegate(self)
+			}
+			timer?.start()
+		}
+		running = !running
 	}
 	
-	func alarm(){
-		print("done!!")
+	var audioPlayer: AVAudioPlayer!
+
+}
+
+extension TimelyViewController: TimerUIDelegate {
+	func timeUpdate(seconds:Int){
+		slider.intValue = Int32(seconds)
 	}
 }

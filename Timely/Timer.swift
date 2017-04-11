@@ -11,46 +11,62 @@ import Foundation
 class CountdownTimer {
 	
 	var timer: Timer?
-
-	var seconds: Int = Constants.nums.defaultTimerValue {
-		didSet{
-			if(oldValue <= 0){
-				running = false
-				NotificationCenter.default.post(name: NSNotification.Name(Constants.strings.countdownZero), object: nil)
+	var alarm: Alarm?
+	weak var delegate: TimerUIDelegate?
+	var startTime: Int!
+	
+	var seconds: Int {
+		willSet {
+			delegate?.timeUpdate(seconds: newValue)
+			if(newValue <= 0){
+				stop()
+				alarm = Alarm()
+				alarm?.playSound()
 			}
 		}
 	}
 	
 	var running: Bool = false {
-		willSet {
-			timer?.invalidate()
-			if(newValue){
-				timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
+		didSet {
+			if(oldValue == false && running == true){
+				timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
 					print("ticktock \(self.seconds)")
 					self.seconds -= 1
 				})
+			}else if(oldValue == true && running == false){
+				timer?.invalidate()
 			}
 		}
 	}
 	
-	func startTimer(withInitialValue value: Int){
-		seconds = value
+	init(withTime: Int){
+		startTime = withTime
+		seconds = withTime
+	}
+	
+}
+
+extension CountdownTimer : TimelyTimer {
+	
+	func start(){
 		running = true
 	}
 	
-	func reset(withNewValue value: Int) {
+	func stop(){
 		running = false
-		seconds = value
+		if let _ = alarm {
+			alarm?.stopSound()
+		}
 	}
 	
-	func stopTimer(){
-		running = false
+	func reset(){
+		stop()
+		seconds = startTime
 	}
 	
-	func toggleTimer(){
-		running = !running
+	func setDelegate(_ delegate: TimerUIDelegate){
+		self.delegate = delegate
 	}
-	
 }
 
 extension CountdownTimer : CustomStringConvertible {
