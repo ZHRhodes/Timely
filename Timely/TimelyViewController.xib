@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkI-fn-nlz">
-                    <rect key="frame" x="13" y="77" width="21" height="227"/>
+                    <rect key="frame" x="13" y="77" width="19" height="227"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <sliderCell key="cell" alignment="left" maxValue="10" doubleValue="5" tickMarkPosition="right" sliderType="linear" id="S1H-vb-8Rl"/>
                     <connections>
@@ -48,20 +48,6 @@
             </subviews>
             <point key="canvasLocation" x="311" y="194"/>
         </customView>
-        <datePicker verticalHuggingPriority="750" id="cYT-FA-d0a">
-            <rect key="frame" x="0.0" y="0.0" width="110" height="31"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="S7u-ZV-ciS">
-                <font key="font" metaFont="system"/>
-                <date key="date" timeIntervalSinceReferenceDate="-595926000">
-                    <!--1982-02-12 17:00:00 +0000-->
-                </date>
-                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
-            </datePickerCell>
-            <point key="canvasLocation" x="512" y="73"/>
-        </datePicker>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>

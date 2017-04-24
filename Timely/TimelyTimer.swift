@@ -14,3 +14,7 @@ protocol TimelyTimer {
 	func reset()
 	func setDelegate(_ delegate: TimerUIDelegate)
 }
+
+protocol TimerUIDelegate: class {
+	func timeUpdate(seconds: Int)
+}

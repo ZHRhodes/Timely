@@ -8,11 +8,7 @@
 
 import Foundation
 import AVFoundation
-
-enum  AlarmSound: String {
-	case SomeoneNew = "SomeoneNew"
-	case Ping = "Ping"
-}
+import Cocoa
 
 struct Alarm {
 	var player: AVAudioPlayer!
@@ -23,13 +19,15 @@ struct Alarm {
 	}
 	
 	init() {
-		self.init(sound: AlarmSound.SomeoneNew)
+		self.init(sound: AlarmSound.Glass)
 	}
 	
 	mutating func playSound(){
-		let soundFilepath = URL(fileURLWithPath: Bundle.main.path(forResource: sound.rawValue, ofType: "mp3")!)
+		StatusItemManager.shared.showPopover(nil)
+		let soundFilepath = URL(fileURLWithPath: Bundle.main.path(forResource: sound.rawValue, ofType: sound.getFileType())!)
 		do {
 			player = try AVAudioPlayer(contentsOf: soundFilepath, fileTypeHint: "mp3")
+			player.numberOfLoops = 1000
 			player.prepareToPlay()
 			player.play()
 		} catch {

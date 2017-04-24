@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14047A231EAAA349006A4D1E /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14047A221EAAA349006A4D1E /* TimerTests.swift */; };
+		149444A21E9EE6E700E11DE4 /* StatusItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149444A11E9EE6E700E11DE4 /* StatusItemManager.swift */; };
 		14ABE0C31E973E6C002A046F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0C21E973E6C002A046F /* AppDelegate.swift */; };
 		14ABE0C81E973E6C002A046F /* Timely.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0C61E973E6C002A046F /* Timely.xcdatamodeld */; };
 		14ABE0CA1E973E6C002A046F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0C91E973E6C002A046F /* Assets.xcassets */; };
@@ -22,6 +24,12 @@
 		14ABE0FD1E978D50002A046F /* SomeoneNew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0FC1E978D50002A046F /* SomeoneNew.mp3 */; };
 		14ABE0FF1E98B937002A046F /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0FE1E98B937002A046F /* Alarm.swift */; };
 		14ABE1011E9CB727002A046F /* TimelyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE1001E9CB727002A046F /* TimelyTimer.swift */; };
+		14ABE1081E9CCCDA002A046F /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE1061E9CCCDA002A046F /* CountdownViewController.swift */; };
+		14ABE1091E9CCCDA002A046F /* CountdownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE1071E9CCCDA002A046F /* CountdownViewController.xib */; };
+		14ABE10F1E9D827F002A046F /* TimeDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE10E1E9D827F002A046F /* TimeDuration.swift */; };
+		14ABE1111E9D8669002A046F /* Glass.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE1101E9D8669002A046F /* Glass.aiff */; };
+		14ABE1131E9D86A2002A046F /* Basso.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE1121E9D86A2002A046F /* Basso.aiff */; };
+		14ABE1161E9D8864002A046F /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE1151E9D8864002A046F /* AlarmSound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14047A221EAAA349006A4D1E /* TimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
+		149444A11E9EE6E700E11DE4 /* StatusItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusItemManager.swift; sourceTree = "<group>"; };
 		14ABE0BF1E973E6C002A046F /* Timely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14ABE0C21E973E6C002A046F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14ABE0C71E973E6C002A046F /* Timely.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Timely.xcdatamodel; sourceTree = "<group>"; };
@@ -59,10 +69,16 @@
 		14ABE0F41E974F5E002A046F /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		14ABE0F61E976C3F002A046F /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		14ABE0F81E97854F002A046F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		14ABE0FA1E978B09002A046F /* Ping.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = Ping.aiff; path = Timely/Ping.aiff; sourceTree = "<group>"; };
+		14ABE0FA1E978B09002A046F /* Ping.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Ping.aiff; sourceTree = "<group>"; };
 		14ABE0FC1E978D50002A046F /* SomeoneNew.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SomeoneNew.mp3; sourceTree = "<group>"; };
 		14ABE0FE1E98B937002A046F /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		14ABE1001E9CB727002A046F /* TimelyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelyTimer.swift; sourceTree = "<group>"; };
+		14ABE1061E9CCCDA002A046F /* CountdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountdownViewController.swift; path = ../CountdownViewController.swift; sourceTree = "<group>"; };
+		14ABE1071E9CCCDA002A046F /* CountdownViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CountdownViewController.xib; path = ../CountdownViewController.xib; sourceTree = "<group>"; };
+		14ABE10E1E9D827F002A046F /* TimeDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeDuration.swift; sourceTree = "<group>"; };
+		14ABE1101E9D8669002A046F /* Glass.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Glass.aiff; sourceTree = "<group>"; };
+		14ABE1121E9D86A2002A046F /* Basso.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Basso.aiff; sourceTree = "<group>"; };
+		14ABE1151E9D8864002A046F /* AlarmSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +109,6 @@
 		14ABE0B61E973E6B002A046F = {
 			isa = PBXGroup;
 			children = (
-				14ABE0FA1E978B09002A046F /* Ping.aiff */,
 				14ABE0C11E973E6C002A046F /* Timely */,
 				14ABE0D61E973E6C002A046F /* TimelyTests */,
 				14ABE0E11E973E6C002A046F /* TimelyUITests */,
@@ -115,18 +130,17 @@
 			isa = PBXGroup;
 			children = (
 				14ABE0C21E973E6C002A046F /* AppDelegate.swift */,
-				14ABE0F41E974F5E002A046F /* EventMonitor.swift */,
 				14ABE0F81E97854F002A046F /* Constants.swift */,
-				14ABE0F61E976C3F002A046F /* Timer.swift */,
-				14ABE0FE1E98B937002A046F /* Alarm.swift */,
-				14ABE0F01E9746D8002A046F /* TimelyViewController.swift */,
-				14ABE0F11E9746D9002A046F /* TimelyViewController.xib */,
-				14ABE0FC1E978D50002A046F /* SomeoneNew.mp3 */,
+				14ABE0F41E974F5E002A046F /* EventMonitor.swift */,
+				14ABE1171E9D88D0002A046F /* Timer */,
+				14ABE1181E9D88D8002A046F /* Alarm */,
+				14ABE11A1E9D88F4002A046F /* TimelyView */,
+				14ABE1191E9D88EB002A046F /* CountdownView */,
 				14ABE0C91E973E6C002A046F /* Assets.xcassets */,
 				14ABE0CB1E973E6C002A046F /* Main.storyboard */,
 				14ABE0CE1E973E6C002A046F /* Info.plist */,
 				14ABE0C61E973E6C002A046F /* Timely.xcdatamodeld */,
-				14ABE1001E9CB727002A046F /* TimelyTimer.swift */,
+				149444A11E9EE6E700E11DE4 /* StatusItemManager.swift */,
 			);
 			path = Timely;
 			sourceTree = "<group>";
@@ -135,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				14ABE0D71E973E6C002A046F /* TimelyTests.swift */,
+				14047A221EAAA349006A4D1E /* TimerTests.swift */,
 				14ABE0D91E973E6C002A046F /* Info.plist */,
 			);
 			path = TimelyTests;
@@ -147,6 +162,55 @@
 				14ABE0E41E973E6C002A046F /* Info.plist */,
 			);
 			path = TimelyUITests;
+			sourceTree = "<group>";
+		};
+		14ABE1141E9D8834002A046F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				14ABE0FC1E978D50002A046F /* SomeoneNew.mp3 */,
+				14ABE0FA1E978B09002A046F /* Ping.aiff */,
+				14ABE1101E9D8669002A046F /* Glass.aiff */,
+				14ABE1121E9D86A2002A046F /* Basso.aiff */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		14ABE1171E9D88D0002A046F /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				14ABE0F61E976C3F002A046F /* Timer.swift */,
+				14ABE1001E9CB727002A046F /* TimelyTimer.swift */,
+				14ABE10E1E9D827F002A046F /* TimeDuration.swift */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
+		14ABE1181E9D88D8002A046F /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				14ABE1141E9D8834002A046F /* Sounds */,
+				14ABE0FE1E98B937002A046F /* Alarm.swift */,
+				14ABE1151E9D8864002A046F /* AlarmSound.swift */,
+			);
+			name = Alarm;
+			sourceTree = "<group>";
+		};
+		14ABE1191E9D88EB002A046F /* CountdownView */ = {
+			isa = PBXGroup;
+			children = (
+				14ABE1061E9CCCDA002A046F /* CountdownViewController.swift */,
+				14ABE1071E9CCCDA002A046F /* CountdownViewController.xib */,
+			);
+			name = CountdownView;
+			sourceTree = "<group>";
+		};
+		14ABE11A1E9D88F4002A046F /* TimelyView */ = {
+			isa = PBXGroup;
+			children = (
+				14ABE0F01E9746D8002A046F /* TimelyViewController.swift */,
+				14ABE0F11E9746D9002A046F /* TimelyViewController.xib */,
+			);
+			name = TimelyView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,10 +323,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14ABE1111E9D8669002A046F /* Glass.aiff in Resources */,
 				14ABE0FB1E978B09002A046F /* Ping.aiff in Resources */,
 				14ABE0FD1E978D50002A046F /* SomeoneNew.mp3 in Resources */,
 				14ABE0F31E9746D9002A046F /* TimelyViewController.xib in Resources */,
 				14ABE0CA1E973E6C002A046F /* Assets.xcassets in Resources */,
+				14ABE1091E9CCCDA002A046F /* CountdownViewController.xib in Resources */,
+				14ABE1131E9D86A2002A046F /* Basso.aiff in Resources */,
 				14ABE0CD1E973E6C002A046F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,11 +355,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149444A21E9EE6E700E11DE4 /* StatusItemManager.swift in Sources */,
 				14ABE0F21E9746D9002A046F /* TimelyViewController.swift in Sources */,
 				14ABE1011E9CB727002A046F /* TimelyTimer.swift in Sources */,
 				14ABE0F51E974F5E002A046F /* EventMonitor.swift in Sources */,
+				14ABE1081E9CCCDA002A046F /* CountdownViewController.swift in Sources */,
 				14ABE0C81E973E6C002A046F /* Timely.xcdatamodeld in Sources */,
 				14ABE0F71E976C3F002A046F /* Timer.swift in Sources */,
+				14ABE1161E9D8864002A046F /* AlarmSound.swift in Sources */,
+				14ABE10F1E9D827F002A046F /* TimeDuration.swift in Sources */,
 				14ABE0C31E973E6C002A046F /* AppDelegate.swift in Sources */,
 				14ABE0FF1E98B937002A046F /* Alarm.swift in Sources */,
 				14ABE0F91E97854F002A046F /* Constants.swift in Sources */,
@@ -304,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14ABE0D81E973E6C002A046F /* TimelyTests.swift in Sources */,
+				14047A231EAAA349006A4D1E /* TimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +615,7 @@
 				14ABE0E91E973E6C002A046F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14ABE0EA1E973E6C002A046F /* Build configuration list for PBXNativeTarget "TimelyTests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +624,7 @@
 				14ABE0EC1E973E6C002A046F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14ABE0ED1E973E6C002A046F /* Build configuration list for PBXNativeTarget "TimelyUITests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +633,7 @@
 				14ABE0EF1E973E6C002A046F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

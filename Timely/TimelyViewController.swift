@@ -7,13 +7,8 @@
 //
 
 import Cocoa
-import AVFoundation //pull this out?
 
-protocol TimerUIDelegate: class {
-	func timeUpdate(seconds: Int)
-}
-
-class TimelyViewController: NSViewController, AVAudioPlayerDelegate {
+class TimelyViewController: NSViewController {
 
 	@IBOutlet var slider: NSSlider!
 	var timer: TimelyTimer?
@@ -43,8 +38,6 @@ class TimelyViewController: NSViewController, AVAudioPlayerDelegate {
 		running = !running
 	}
 	
-	var audioPlayer: AVAudioPlayer!
-
 }
 
 extension TimelyViewController: TimerUIDelegate {

@@ -11,7 +11,7 @@ import Foundation
 class CountdownTimer {
 	
 	var timer: Timer?
-	var alarm: Alarm?
+	var alarm: Alarm!
 	weak var delegate: TimerUIDelegate?
 	var startTime: Int!
 	
