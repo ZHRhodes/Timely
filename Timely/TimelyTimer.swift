@@ -16,5 +16,5 @@ protocol TimelyTimer {
 }
 
 protocol TimerUIDelegate: class {
-	func timeUpdate(seconds: Int)
+	func timeUpdate(seconds: UInt)
 }

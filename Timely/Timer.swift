@@ -11,17 +11,16 @@ import Foundation
 class CountdownTimer {
 	
 	var timer: Timer?
-	var alarm: Alarm!
+	var alarm: TimelyAlarm!
 	weak var delegate: TimerUIDelegate?
-	var startTime: Int!
+	var startTime: UInt!
 	
-	var seconds: Int {
+	var seconds: UInt {
 		willSet {
 			delegate?.timeUpdate(seconds: newValue)
-			if(newValue <= 0){
+			if(newValue == 0){
 				stop()
-				alarm = Alarm()
-				alarm?.playSound()
+				alarm.playSound()
 			}
 		}
 	}
@@ -39,9 +38,10 @@ class CountdownTimer {
 		}
 	}
 	
-	init(withTime: Int){
-		startTime = withTime
-		seconds = withTime
+	init(withTime time: UInt, alarm: TimelyAlarm){
+		startTime = time
+		seconds = time
+		self.alarm = alarm
 	}
 	
 }
@@ -54,9 +54,7 @@ extension CountdownTimer : TimelyTimer {
 	
 	func stop(){
 		running = false
-		if let _ = alarm {
-			alarm?.stopSound()
-		}
+		alarm.stopSound()
 	}
 	
 	func reset(){
@@ -69,8 +67,8 @@ extension CountdownTimer : TimelyTimer {
 	}
 }
 
-extension CountdownTimer : CustomStringConvertible {
-	var description: String {
-		return String(describing: seconds)
-	}
-}
+//extension CountdownTimer : CustomStringConvertible {
+//	var description: String {
+//		return String(describing: seconds)
+//	}
+//}

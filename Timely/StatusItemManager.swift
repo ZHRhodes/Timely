@@ -9,7 +9,14 @@
 import Foundation
 import Cocoa
 
-class StatusItemManager: NSObject {
+protocol TimelyStatusItemManager {
+	func togglePopover(sender: AnyObject?)
+	func closePopover(_ sender: AnyObject?)
+	func showPopover(_ sender: AnyObject?)
+	func setTime(_ time: TimeDuration)
+}
+
+class StatusItemManager: NSObject, TimelyStatusItemManager {
 	static let shared = StatusItemManager()
 	
 	let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)

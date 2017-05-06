@@ -46,7 +46,7 @@ class CountdownViewController: NSViewController {
 			timer = nil
 		}else{
 			if(timer == nil){
-				timer = CountdownTimer(withTime: time.toSeconds())
+				timer = CountdownTimer(withTime: time.toSeconds(), alarm: Alarm(sound: AlarmSound.Basso))
 				timer?.setDelegate(self)
 			}
 			timer?.start()
@@ -60,14 +60,14 @@ class CountdownViewController: NSViewController {
 		seconds.isEnabled = enabled
 	}
 	
-	func createIntFromNumbers(inString str: String) -> Int {
-		let ret = Int(str.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: ""))
+	func createIntFromNumbers(inString str: String) -> UInt {
+		let ret = UInt(str.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: ""))
 		return ret != nil ? ret! : 0
 	}
 }
 
 extension CountdownViewController: TimerUIDelegate {
-	func timeUpdate(seconds: Int) {
+	func timeUpdate(seconds: UInt) {
 		let td = TimeDuration(seconds: seconds)
 		self.hours.stringValue = String(describing: td.hours)
 		self.minutes.stringValue = String(describing: td.minutes)

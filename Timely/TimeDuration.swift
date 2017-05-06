@@ -9,15 +9,17 @@
 import Foundation
 
 struct TimeDuration {
-	var hours, minutes, seconds: Int
+	var hours, minutes, seconds: UInt
 	
-	init( hours: Int, minutes: Int, seconds: Int){
+	init( hours: UInt, minutes: UInt, seconds: UInt){
 		self.hours = hours
-		self.minutes = minutes
-		self.seconds = seconds
+		self.hours += minutes/60
+		self.minutes = minutes%60
+		self.minutes += seconds/60
+		self.seconds = seconds%60
 	}
 	
-	init( seconds: Int){
+	init( seconds: UInt){
 		var s = seconds
 		self.hours = s/3600
 		s %= 3600
@@ -26,7 +28,7 @@ struct TimeDuration {
 		self.seconds = s
 	}
 	
-	func toSeconds() -> Int{
+	func toSeconds() -> UInt{
 		return hours*3600 + minutes*60 + seconds
 	}
 }

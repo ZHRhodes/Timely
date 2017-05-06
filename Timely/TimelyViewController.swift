@@ -30,7 +30,7 @@ class TimelyViewController: NSViewController {
 			timer?.stop()
 		}else{
 			if(timer == nil){
-				timer = CountdownTimer(withTime: Int(slider.intValue))
+				timer = CountdownTimer(withTime: UInt(slider.intValue), alarm: Alarm(sound: AlarmSound.Glass))
 				timer?.setDelegate(self)
 			}
 			timer?.start()
@@ -41,7 +41,7 @@ class TimelyViewController: NSViewController {
 }
 
 extension TimelyViewController: TimerUIDelegate {
-	func timeUpdate(seconds:Int){
+	func timeUpdate(seconds:UInt){
 		slider.intValue = Int32(seconds)
 	}
 }

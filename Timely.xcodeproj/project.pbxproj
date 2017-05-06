@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		14047A231EAAA349006A4D1E /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14047A221EAAA349006A4D1E /* TimerTests.swift */; };
+		14047A251EADB28A006A4D1E /* AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14047A241EADB28A006A4D1E /* AlarmTests.swift */; };
+		14047A271EADBEB9006A4D1E /* TimeDurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14047A261EADBEB9006A4D1E /* TimeDurationTests.swift */; };
 		149444A21E9EE6E700E11DE4 /* StatusItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149444A11E9EE6E700E11DE4 /* StatusItemManager.swift */; };
 		14ABE0C31E973E6C002A046F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0C21E973E6C002A046F /* AppDelegate.swift */; };
 		14ABE0C81E973E6C002A046F /* Timely.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0C61E973E6C002A046F /* Timely.xcdatamodeld */; };
 		14ABE0CA1E973E6C002A046F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0C91E973E6C002A046F /* Assets.xcassets */; };
 		14ABE0CD1E973E6C002A046F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0CB1E973E6C002A046F /* Main.storyboard */; };
-		14ABE0D81E973E6C002A046F /* TimelyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0D71E973E6C002A046F /* TimelyTests.swift */; };
 		14ABE0E31E973E6C002A046F /* TimelyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0E21E973E6C002A046F /* TimelyUITests.swift */; };
 		14ABE0F21E9746D9002A046F /* TimelyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F01E9746D8002A046F /* TimelyViewController.swift */; };
 		14ABE0F31E9746D9002A046F /* TimelyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0F11E9746D9002A046F /* TimelyViewController.xib */; };
@@ -51,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		14047A221EAAA349006A4D1E /* TimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
+		14047A241EADB28A006A4D1E /* AlarmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTests.swift; sourceTree = "<group>"; };
+		14047A261EADBEB9006A4D1E /* TimeDurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeDurationTests.swift; sourceTree = "<group>"; };
 		149444A11E9EE6E700E11DE4 /* StatusItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusItemManager.swift; sourceTree = "<group>"; };
 		14ABE0BF1E973E6C002A046F /* Timely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14ABE0C21E973E6C002A046F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +62,6 @@
 		14ABE0CC1E973E6C002A046F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14ABE0CE1E973E6C002A046F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14ABE0D31E973E6C002A046F /* TimelyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14ABE0D71E973E6C002A046F /* TimelyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyTests.swift; sourceTree = "<group>"; };
 		14ABE0D91E973E6C002A046F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14ABE0DE1E973E6C002A046F /* TimelyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14ABE0E21E973E6C002A046F /* TimelyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyUITests.swift; sourceTree = "<group>"; };
@@ -148,8 +150,9 @@
 		14ABE0D61E973E6C002A046F /* TimelyTests */ = {
 			isa = PBXGroup;
 			children = (
-				14ABE0D71E973E6C002A046F /* TimelyTests.swift */,
 				14047A221EAAA349006A4D1E /* TimerTests.swift */,
+				14047A241EADB28A006A4D1E /* AlarmTests.swift */,
+				14047A261EADBEB9006A4D1E /* TimeDurationTests.swift */,
 				14ABE0D91E973E6C002A046F /* Info.plist */,
 			);
 			path = TimelyTests;
@@ -374,7 +377,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14ABE0D81E973E6C002A046F /* TimelyTests.swift in Sources */,
+				14047A251EADB28A006A4D1E /* AlarmTests.swift in Sources */,
+				14047A271EADBEB9006A4D1E /* TimeDurationTests.swift in Sources */,
 				14047A231EAAA349006A4D1E /* TimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

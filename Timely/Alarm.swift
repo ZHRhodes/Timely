@@ -10,20 +10,22 @@ import Foundation
 import AVFoundation
 import Cocoa
 
-struct Alarm {
+protocol TimelyAlarm {
+	mutating func playSound()
+	func stopSound()
+}
+
+struct Alarm: TimelyAlarm {
 	var player: AVAudioPlayer!
 	var sound: AlarmSound!
+	var manager: TimelyStatusItemManager = StatusItemManager.shared
 	
-	init(sound: AlarmSound) {
-		self.sound = sound
-	}
-	
-	init() {
-		self.init(sound: AlarmSound.Glass)
+	init(sound: AlarmSound? = nil) {
+		self.sound = sound ?? AlarmSound.Glass
 	}
 	
 	mutating func playSound(){
-		StatusItemManager.shared.showPopover(nil)
+		manager.showPopover(nil)
 		let soundFilepath = URL(fileURLWithPath: Bundle.main.path(forResource: sound.rawValue, ofType: sound.getFileType())!)
 		do {
 			player = try AVAudioPlayer(contentsOf: soundFilepath, fileTypeHint: "mp3")
