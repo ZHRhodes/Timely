@@ -31,7 +31,7 @@ class StatusItemManager: NSObject, TimelyStatusItemManager {
 		}
 		
 		
-		popover.contentViewController = CountdownViewController(nibName: "CountdownViewController", bundle: nil)
+		popover.contentViewController = TabContainer(nibName: "TabContainer", bundle: nil)
 		
 		eventMonitor = EventMonitor(mask: .leftMouseDown, handler: { [weak self] (event) in
 			if let isShown = (self?.popover.isShown){

@@ -53,6 +53,7 @@ class CountdownViewController: NSViewController {
 		}
 		running = !running
 	}
+
 	
 	func toggleTextFields(enabled: Bool){
 		hours.isEnabled = enabled

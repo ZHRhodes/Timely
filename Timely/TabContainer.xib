@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12118" systemVersion="16F60a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TabContainer" customModule="Timely" customModuleProvider="target">
+            <connections>
+                <outlet property="countdownTabItem" destination="rr0-bJ-dhK" id="w9h-iX-pex"/>
+                <outlet property="pomodoroTabItem" destination="kSf-LG-JkW" id="ftd-8M-vcz"/>
+                <outlet property="tabs" destination="Zc1-Sh-5y7" id="m9c-L8-EL7"/>
+                <outlet property="view" destination="Zc1-Sh-5y7" id="GGw-K3-PjW"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <tabView fixedFrame="YES" drawsBackground="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc1-Sh-5y7">
+                    <rect key="frame" x="0.0" y="0.0" width="225" height="114"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <font key="font" metaFont="system"/>
+                    <tabViewItems>
+                        <tabViewItem label="Countdown" identifier="1" id="rr0-bJ-dhK">
+                            <view key="view" ambiguous="YES" id="ab3-97-Jxn">
+                                <rect key="frame" x="10" y="33" width="219" height="84"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                        </tabViewItem>
+                        <tabViewItem label="Pomodoro" identifier="2" id="kSf-LG-JkW">
+                            <view key="view" id="JJR-HC-zML">
+                                <rect key="frame" x="10" y="33" width="219" height="84"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                        </tabViewItem>
+                    </tabViewItems>
+                </tabView>
+            </subviews>
+            <point key="canvasLocation" x="-18.5" y="69"/>
+        </customView>
+    </objects>
+</document>

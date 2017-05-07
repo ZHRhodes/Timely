@@ -11,6 +11,9 @@
 		14047A251EADB28A006A4D1E /* AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14047A241EADB28A006A4D1E /* AlarmTests.swift */; };
 		14047A271EADBEB9006A4D1E /* TimeDurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14047A261EADBEB9006A4D1E /* TimeDurationTests.swift */; };
 		149444A21E9EE6E700E11DE4 /* StatusItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149444A11E9EE6E700E11DE4 /* StatusItemManager.swift */; };
+		14955D311EBE8A4B000DB80E /* TabContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14955D301EBE8A4B000DB80E /* TabContainer.xib */; };
+		14955D341EBE8AD8000DB80E /* TabContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14955D331EBE8AD8000DB80E /* TabContainer.swift */; };
+		14955D3A1EBFBDC2000DB80E /* UIView+Timely.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14955D391EBFBDC2000DB80E /* UIView+Timely.swift */; };
 		14ABE0C31E973E6C002A046F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0C21E973E6C002A046F /* AppDelegate.swift */; };
 		14ABE0C81E973E6C002A046F /* Timely.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0C61E973E6C002A046F /* Timely.xcdatamodeld */; };
 		14ABE0CA1E973E6C002A046F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0C91E973E6C002A046F /* Assets.xcassets */; };
@@ -55,6 +58,9 @@
 		14047A241EADB28A006A4D1E /* AlarmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTests.swift; sourceTree = "<group>"; };
 		14047A261EADBEB9006A4D1E /* TimeDurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeDurationTests.swift; sourceTree = "<group>"; };
 		149444A11E9EE6E700E11DE4 /* StatusItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusItemManager.swift; sourceTree = "<group>"; };
+		14955D301EBE8A4B000DB80E /* TabContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabContainer.xib; sourceTree = "<group>"; };
+		14955D331EBE8AD8000DB80E /* TabContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabContainer.swift; sourceTree = "<group>"; };
+		14955D391EBFBDC2000DB80E /* UIView+Timely.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Timely.swift"; sourceTree = "<group>"; };
 		14ABE0BF1E973E6C002A046F /* Timely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14ABE0C21E973E6C002A046F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14ABE0C71E973E6C002A046F /* Timely.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Timely.xcdatamodel; sourceTree = "<group>"; };
@@ -108,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14955D321EBE8AC4000DB80E /* TabContainer */ = {
+			isa = PBXGroup;
+			children = (
+				14955D331EBE8AD8000DB80E /* TabContainer.swift */,
+				14955D301EBE8A4B000DB80E /* TabContainer.xib */,
+			);
+			name = TabContainer;
+			sourceTree = "<group>";
+		};
 		14ABE0B61E973E6B002A046F = {
 			isa = PBXGroup;
 			children = (
@@ -138,11 +153,13 @@
 				14ABE1181E9D88D8002A046F /* Alarm */,
 				14ABE11A1E9D88F4002A046F /* TimelyView */,
 				14ABE1191E9D88EB002A046F /* CountdownView */,
+				14955D321EBE8AC4000DB80E /* TabContainer */,
 				14ABE0C91E973E6C002A046F /* Assets.xcassets */,
 				14ABE0CB1E973E6C002A046F /* Main.storyboard */,
 				14ABE0CE1E973E6C002A046F /* Info.plist */,
 				14ABE0C61E973E6C002A046F /* Timely.xcdatamodeld */,
 				149444A11E9EE6E700E11DE4 /* StatusItemManager.swift */,
+				14955D391EBFBDC2000DB80E /* UIView+Timely.swift */,
 			);
 			path = Timely;
 			sourceTree = "<group>";
@@ -331,6 +348,7 @@
 				14ABE0FD1E978D50002A046F /* SomeoneNew.mp3 in Resources */,
 				14ABE0F31E9746D9002A046F /* TimelyViewController.xib in Resources */,
 				14ABE0CA1E973E6C002A046F /* Assets.xcassets in Resources */,
+				14955D311EBE8A4B000DB80E /* TabContainer.xib in Resources */,
 				14ABE1091E9CCCDA002A046F /* CountdownViewController.xib in Resources */,
 				14ABE1131E9D86A2002A046F /* Basso.aiff in Resources */,
 				14ABE0CD1E973E6C002A046F /* Main.storyboard in Resources */,
@@ -358,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14955D3A1EBFBDC2000DB80E /* UIView+Timely.swift in Sources */,
 				149444A21E9EE6E700E11DE4 /* StatusItemManager.swift in Sources */,
 				14ABE0F21E9746D9002A046F /* TimelyViewController.swift in Sources */,
 				14ABE1011E9CB727002A046F /* TimelyTimer.swift in Sources */,
@@ -367,6 +386,7 @@
 				14ABE0F71E976C3F002A046F /* Timer.swift in Sources */,
 				14ABE1161E9D8864002A046F /* AlarmSound.swift in Sources */,
 				14ABE10F1E9D827F002A046F /* TimeDuration.swift in Sources */,
+				14955D341EBE8AD8000DB80E /* TabContainer.swift in Sources */,
 				14ABE0C31E973E6C002A046F /* AppDelegate.swift in Sources */,
 				14ABE0FF1E98B937002A046F /* Alarm.swift in Sources */,
 				14ABE0F91E97854F002A046F /* Constants.swift in Sources */,
