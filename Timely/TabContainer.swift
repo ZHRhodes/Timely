@@ -21,6 +21,7 @@ class TabContainer: NSViewController {
 		vc2 = CountdownViewController(nibName: "CountdownViewController", bundle: nil)
 		tabView.tabViewItem(at: 0).view = vc1.view
 		tabView.tabViewItem(at: 1).view = vc2.view
+		tabs.selectSegment(withTag: 1)
 	}
 	
 	@IBAction func segmentTapped(_ sender: Any) {

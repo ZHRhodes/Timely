@@ -46,8 +46,8 @@
                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="1Bg-kX-pHS">
                         <font key="font" metaFont="system"/>
                         <segments>
-                            <segment label="Countdown" width="77"/>
-                            <segment label="Pomodoro" width="76" selected="YES" tag="1"/>
+                            <segment label="Countdown" width="77" tag="1"/>
+                            <segment label="Pomodoro" width="76" selected="YES" tag="2"/>
                         </segments>
                         <connections>
                             <action selector="segmentTapped:" target="-2" id="bNl-Ac-Nss"/>
