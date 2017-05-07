@@ -8,11 +8,10 @@
 
 import Cocoa
 
-class TabContainer: NSTabViewController {
+class TabContainer: NSViewController {
 	
-	@IBOutlet var tabs: NSTabView!
-	@IBOutlet var countdownTabItem: NSTabViewItem!
-	@IBOutlet var pomodoroTabItem: NSTabViewItem!
+	@IBOutlet var tabs: NSSegmentedCell!
+	@IBOutlet var tabView: NSTabView!
 	var vc1: CountdownViewController!
 	var vc2: CountdownViewController!
 	
@@ -20,8 +19,13 @@ class TabContainer: NSTabViewController {
 		super.viewDidLoad()
 		vc1 = CountdownViewController(nibName: "CountdownViewController", bundle: nil)
 		vc2 = CountdownViewController(nibName: "CountdownViewController", bundle: nil)
-		countdownTabItem.view = vc1?.view
-		pomodoroTabItem.view = vc2?.view
-		
+		tabView.tabViewItem(at: 0).view = vc1.view
+		tabView.tabViewItem(at: 1).view = vc2.view
 	}
+	
+	@IBAction func segmentTapped(_ sender: Any) {
+		tabView.selectTabViewItem(at: tabs.selectedSegment)
+	}
+	
+	
 }

@@ -8,10 +8,11 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TabContainer" customModule="Timely" customModuleProvider="target">
             <connections>
-                <outlet property="countdownTabItem" destination="rr0-bJ-dhK" id="w9h-iX-pex"/>
-                <outlet property="pomodoroTabItem" destination="kSf-LG-JkW" id="ftd-8M-vcz"/>
-                <outlet property="tabs" destination="Zc1-Sh-5y7" id="m9c-L8-EL7"/>
-                <outlet property="view" destination="Zc1-Sh-5y7" id="GGw-K3-PjW"/>
+                <outlet property="tabView" destination="wND-MD-bpE" id="FXF-U9-tCb"/>
+                <outlet property="tabs" destination="1Bg-kX-pHS" id="Qhn-4L-vCq"/>
+                <outlet property="vc1" destination="qqP-fR-6xd" id="zzo-ME-ZAj"/>
+                <outlet property="vc2" destination="yLZ-lM-lxB" id="RHF-Tv-aPS"/>
+                <outlet property="view" destination="c22-O7-iKe" id="6hv-xh-S5E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -20,25 +21,39 @@
             <rect key="frame" x="0.0" y="0.0" width="225" height="114"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <tabView fixedFrame="YES" drawsBackground="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc1-Sh-5y7">
-                    <rect key="frame" x="0.0" y="0.0" width="225" height="114"/>
+                <tabView fixedFrame="YES" drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="wND-MD-bpE">
+                    <rect key="frame" x="0.0" y="0.0" width="225" height="86"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <font key="font" metaFont="system"/>
                     <tabViewItems>
-                        <tabViewItem label="Countdown" identifier="1" id="rr0-bJ-dhK">
-                            <view key="view" ambiguous="YES" id="ab3-97-Jxn">
-                                <rect key="frame" x="10" y="33" width="219" height="84"/>
+                        <tabViewItem label="Tab" identifier="1" id="qqP-fR-6xd">
+                            <view key="view" ambiguous="YES" id="gpe-Vv-M0O">
+                                <rect key="frame" x="0.0" y="0.0" width="217" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </view>
                         </tabViewItem>
-                        <tabViewItem label="Pomodoro" identifier="2" id="kSf-LG-JkW">
-                            <view key="view" id="JJR-HC-zML">
-                                <rect key="frame" x="10" y="33" width="219" height="84"/>
+                        <tabViewItem label="View" identifier="2" id="yLZ-lM-lxB">
+                            <view key="view" id="jyn-k8-ZqQ">
+                                <rect key="frame" x="0.0" y="0.0" width="217" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </view>
                         </tabViewItem>
                     </tabViewItems>
                 </tabView>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B9c-Cd-Qgn">
+                    <rect key="frame" x="32" y="84" width="160" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="1Bg-kX-pHS">
+                        <font key="font" metaFont="system"/>
+                        <segments>
+                            <segment label="Countdown" width="77"/>
+                            <segment label="Pomodoro" width="76" selected="YES" tag="1"/>
+                        </segments>
+                        <connections>
+                            <action selector="segmentTapped:" target="-2" id="bNl-Ac-Nss"/>
+                        </connections>
+                    </segmentedCell>
+                </segmentedControl>
             </subviews>
             <point key="canvasLocation" x="-18.5" y="69"/>
         </customView>
