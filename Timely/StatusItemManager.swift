@@ -19,7 +19,7 @@ protocol TimelyStatusItemManager {
 class StatusItemManager: NSObject, TimelyStatusItemManager {
 	static let shared = StatusItemManager()
 	
-	let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+	let statusItem = NSStatusBar.system().statusItem(withLength: 70)
 	let popover = NSPopover()
 	var eventMonitor: EventMonitor?
 	
@@ -41,7 +41,6 @@ class StatusItemManager: NSObject, TimelyStatusItemManager {
 			}
 		})
 		eventMonitor?.start()
-		
 	}
 	
 	func togglePopover(sender: AnyObject?){
