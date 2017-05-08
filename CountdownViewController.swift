@@ -51,6 +51,7 @@ class CountdownViewController: NSViewController {
 				timer?.setDelegate(self)
 			}
 			timer?.start()
+			updateMenuBarTimeIfVisible()
 		}
 		running = !running
 	}
@@ -66,6 +67,12 @@ class CountdownViewController: NSViewController {
 		let ret = UInt(str.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: ""))
 		return ret != nil ? ret! : 0
 	}
+	
+	func updateMenuBarTimeIfVisible(){
+		if(self.isVisible){
+			StatusItemManager.shared.setTime(time)
+		}
+	}
 }
 
 extension CountdownViewController: TimerUpdateDelegate {
@@ -74,8 +81,6 @@ extension CountdownViewController: TimerUpdateDelegate {
 		self.hours.stringValue = String(describing: td.hours)
 		self.minutes.stringValue = String(describing: td.minutes)
 		self.seconds.stringValue = String(describing: td.seconds)
-		if(self.isVisible){
-			StatusItemManager.shared.setTime(td)
-		}
+		updateMenuBarTimeIfVisible()
 	}
 }

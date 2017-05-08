@@ -42,11 +42,13 @@ class PomodoroViewController: NSViewController {
 			timer.stop()
 		}else{
 			timer.start()
+			StatusItemManager.shared.setTime(timer.getTime())
 		}
 		running = !running
 	}
 	
 	@IBAction func resetTimer(_ sender: Any) {
+		running = false
 		timer.reset()
 	}
 	

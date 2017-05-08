@@ -47,6 +47,10 @@ class CountdownTimer {
 	func setDelegate(_ delegate: TimerUpdateDelegate){
 		self.delegate = delegate
 	}
+	
+	func isTimerJustStarting()->Bool{
+		return (startTime - seconds) < UInt(2)
+	}
 }
 
 extension CountdownTimer : TimelyTimer {

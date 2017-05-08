@@ -52,7 +52,7 @@ enum PomodoroState {
 	
 	mutating func prev(){
 		switch self{
-		case .work1:   self = .lbreak
+		case .work1:   self = .work1
 		case .sbreak1: self = .work1
 		case .work2:   self = .sbreak1
 		case .sbreak2: self = .work2

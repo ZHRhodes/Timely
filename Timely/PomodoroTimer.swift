@@ -30,17 +30,31 @@ class PomodoroTimer {
 	}
 	
 	func skipToNextState(){
-		stop()
-		timer = nil
 		state.next()
-		delegate?.timeUpdate(seconds: state.getTime())
+		updateState()
 	}
 	
 	func skipToPrevState(){
+		if(timer != nil){
+			if(timer!.isTimerJustStarting()){
+				state.prev()
+			}
+		}
+		updateState()
+	}
+	
+	private func updateState(){
+		let timerRunning = timer?.running ?? false
 		stop()
 		timer = nil
-		state.prev()
 		delegate?.timeUpdate(seconds: state.getTime())
+		if(timerRunning){
+			start()
+		}
+	}
+	
+	func getTime()->TimeDuration {
+		return TimeDuration(seconds: timer?.seconds ?? 0)
 	}
 	
 }
@@ -73,6 +87,7 @@ extension PomodoroTimer : TimelyTimer {
 	
 	func reset(){
 		state = .work1
+		stop()
 		timer = nil
 		delegate?.timeUpdate(seconds: state.getTime())
 	}
