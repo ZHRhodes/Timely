@@ -32,3 +32,15 @@ struct TimeDuration {
 		return hours*3600 + minutes*60 + seconds
 	}
 }
+
+extension TimeDuration : CustomStringConvertible {
+	var description: String {
+		return "\(String(format: "%02d", hours)):\(String(format: "%02d", minutes)):\(String(format: "%02d", seconds))"
+	}
+}
+
+extension TimeDuration {
+	var compactDescription: String {
+		return "\(String(format: "%02d", minutes)):\(String(format: "%02d", seconds))"
+	}
+}

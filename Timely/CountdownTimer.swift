@@ -11,8 +11,8 @@ import Foundation
 class CountdownTimer {
 	
 	var timer: Timer?
-	var alarm: TimelyAlarm!
-	weak var delegate: TimerUIDelegate?
+	var alarm: TimelyAlarm?
+	weak var delegate: TimerUpdateDelegate?
 	var startTime: UInt!
 	
 	var seconds: UInt {
@@ -20,7 +20,7 @@ class CountdownTimer {
 			delegate?.timeUpdate(seconds: newValue)
 			if(newValue == 0){
 				stop()
-				alarm.playSound()
+				alarm?.playSound()
 			}
 		}
 	}
@@ -30,7 +30,7 @@ class CountdownTimer {
 			if(oldValue == false && running == true){
 				timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
 					print("ticktock \(self.seconds)")
-					self.seconds -= 1
+					self.seconds = self.seconds > 0 ? self.seconds-1 : 0
 				})
 			}else if(oldValue == true && running == false){
 				timer?.invalidate()
@@ -38,12 +38,15 @@ class CountdownTimer {
 		}
 	}
 	
-	init(withTime time: UInt, alarm: TimelyAlarm){
+	init(withTime time: UInt, alarm: TimelyAlarm?){
 		startTime = time
 		seconds = time
 		self.alarm = alarm
 	}
 	
+	func setDelegate(_ delegate: TimerUpdateDelegate){
+		self.delegate = delegate
+	}
 }
 
 extension CountdownTimer : TimelyTimer {
@@ -54,21 +57,12 @@ extension CountdownTimer : TimelyTimer {
 	
 	func stop(){
 		running = false
-		alarm.stopSound()
+		alarm?.stopSound()
 	}
 	
 	func reset(){
 		stop()
 		seconds = startTime
 	}
-	
-	func setDelegate(_ delegate: TimerUIDelegate){
-		self.delegate = delegate
-	}
-}
 
-//extension CountdownTimer : CustomStringConvertible {
-//	var description: String {
-//		return String(describing: seconds)
-//	}
-//}
+}

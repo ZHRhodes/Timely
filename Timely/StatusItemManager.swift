@@ -67,7 +67,7 @@ class StatusItemManager: NSObject, TimelyStatusItemManager {
 	
 	func setTime(_ time: TimeDuration){
 		if let button = statusItem.button{
-			button.title = "\(String(format: "%02d", time.hours)):\(String(format: "%02d", time.minutes)):\(String(format: "%02d", time.seconds))"
+			button.title = time.description
 		}
 	}
 }

@@ -12,9 +12,12 @@ protocol TimelyTimer {
 	func start()
 	func stop()
 	func reset()
-	func setDelegate(_ delegate: TimerUIDelegate)
 }
 
-protocol TimerUIDelegate: class {
+protocol TimerUpdateDelegate: class {
 	func timeUpdate(seconds: UInt)
+}
+
+protocol PomodoroTimerUpdateDelegate: class, TimerUpdateDelegate {
+	func stateChange(newState: PomodoroState)
 }

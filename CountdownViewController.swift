@@ -16,7 +16,7 @@ class CountdownViewController: NSViewController {
 
 	@IBOutlet var toggleButton: NSButton!
 	
-	var timer: TimelyTimer?
+	var timer: CountdownTimer?
 	var running: Bool = false {
 		willSet {
 			if(newValue){
@@ -38,6 +38,7 @@ class CountdownViewController: NSViewController {
 	
 	override func viewDidAppear() {
 		hours.becomeFirstResponder()
+		StatusItemManager.shared.setTime(time)
 	}
 	
 	@IBAction func toggleTimer(_ sender: Any) {
@@ -46,7 +47,7 @@ class CountdownViewController: NSViewController {
 			timer = nil
 		}else{
 			if(timer == nil){
-				timer = CountdownTimer(withTime: time.toSeconds(), alarm: Alarm(sound: AlarmSound.Basso))
+				timer = CountdownTimer(withTime: time.toSeconds(), alarm: Alarm(sound: AlarmSound.Ping))
 				timer?.setDelegate(self)
 			}
 			timer?.start()
@@ -67,13 +68,14 @@ class CountdownViewController: NSViewController {
 	}
 }
 
-extension CountdownViewController: TimerUIDelegate {
+extension CountdownViewController: TimerUpdateDelegate {
 	func timeUpdate(seconds: UInt) {
 		let td = TimeDuration(seconds: seconds)
 		self.hours.stringValue = String(describing: td.hours)
 		self.minutes.stringValue = String(describing: td.minutes)
 		self.seconds.stringValue = String(describing: td.seconds)
-		StatusItemManager.shared.setTime(td)
-		
+		if(self.isVisible){
+			StatusItemManager.shared.setTime(td)
+		}
 	}
 }

@@ -40,7 +40,7 @@ class TimelyViewController: NSViewController {
 	
 }
 
-extension TimelyViewController: TimerUIDelegate {
+extension TimelyViewController: TimerUpdateDelegate {
 	func timeUpdate(seconds:UInt){
 		slider.intValue = Int32(seconds)
 	}

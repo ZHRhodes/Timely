@@ -16,25 +16,28 @@ protocol TimelyAlarm {
 }
 
 struct Alarm: TimelyAlarm {
-	var player: AVAudioPlayer!
-	var sound: AlarmSound!
+	var player: AVAudioPlayer?
 	var manager: TimelyStatusItemManager = StatusItemManager.shared
+	var soundFilepath: URL!
 	
-	init(sound: AlarmSound? = nil) {
-		self.sound = sound ?? AlarmSound.Glass
+	init(sound: AlarmSound? = nil, repeats: Bool = true) {
+		initPlayer(sound: sound ?? AlarmSound.Glass, loops: repeats ? 1000 : 0)
+	}
+	
+	mutating func initPlayer(sound: AlarmSound, loops: Int){
+		let soundFilepath = URL(fileURLWithPath: Bundle.main.path(forResource: sound.rawValue, ofType: sound.getFileType())!)
+		do {
+			player = try AVAudioPlayer(contentsOf: soundFilepath, fileTypeHint: "mp3")
+			player?.numberOfLoops = loops
+		} catch {
+			print("Error getting the audio file")
+		}
 	}
 	
 	mutating func playSound(){
 		manager.showPopover(nil)
-		let soundFilepath = URL(fileURLWithPath: Bundle.main.path(forResource: sound.rawValue, ofType: sound.getFileType())!)
-		do {
-			player = try AVAudioPlayer(contentsOf: soundFilepath, fileTypeHint: "mp3")
-			player.numberOfLoops = 1000
-			player.prepareToPlay()
-			player.play()
-		} catch {
-			print("Error getting the audio file")
-		}
+		player?.prepareToPlay()
+		player?.play()
 	}
 	
 	func stopSound() {

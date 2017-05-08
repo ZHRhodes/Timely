@@ -14,15 +14,19 @@
 		14955D311EBE8A4B000DB80E /* TabContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14955D301EBE8A4B000DB80E /* TabContainer.xib */; };
 		14955D341EBE8AD8000DB80E /* TabContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14955D331EBE8AD8000DB80E /* TabContainer.swift */; };
 		14955D3A1EBFBDC2000DB80E /* UIView+Timely.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14955D391EBFBDC2000DB80E /* UIView+Timely.swift */; };
+		14955D3D1EBFF2C4000DB80E /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14955D3B1EBFF2C4000DB80E /* PomodoroViewController.swift */; };
+		14955D3E1EBFF2C4000DB80E /* PomodoroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14955D3C1EBFF2C4000DB80E /* PomodoroViewController.xib */; };
+		14955D411EBFF526000DB80E /* PomodoroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14955D401EBFF526000DB80E /* PomodoroTimer.swift */; };
+		14955D431EC01481000DB80E /* PomodoroState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14955D421EC01481000DB80E /* PomodoroState.swift */; };
+		14955D451EC02E0C000DB80E /* NSViewController+Timely.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14955D441EC02E0C000DB80E /* NSViewController+Timely.swift */; };
 		14ABE0C31E973E6C002A046F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0C21E973E6C002A046F /* AppDelegate.swift */; };
 		14ABE0C81E973E6C002A046F /* Timely.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0C61E973E6C002A046F /* Timely.xcdatamodeld */; };
 		14ABE0CA1E973E6C002A046F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0C91E973E6C002A046F /* Assets.xcassets */; };
 		14ABE0CD1E973E6C002A046F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0CB1E973E6C002A046F /* Main.storyboard */; };
 		14ABE0E31E973E6C002A046F /* TimelyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0E21E973E6C002A046F /* TimelyUITests.swift */; };
-		14ABE0F21E9746D9002A046F /* TimelyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F01E9746D8002A046F /* TimelyViewController.swift */; };
 		14ABE0F31E9746D9002A046F /* TimelyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0F11E9746D9002A046F /* TimelyViewController.xib */; };
 		14ABE0F51E974F5E002A046F /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F41E974F5E002A046F /* EventMonitor.swift */; };
-		14ABE0F71E976C3F002A046F /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F61E976C3F002A046F /* Timer.swift */; };
+		14ABE0F71E976C3F002A046F /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F61E976C3F002A046F /* CountdownTimer.swift */; };
 		14ABE0F91E97854F002A046F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F81E97854F002A046F /* Constants.swift */; };
 		14ABE0FB1E978B09002A046F /* Ping.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0FA1E978B09002A046F /* Ping.aiff */; };
 		14ABE0FD1E978D50002A046F /* SomeoneNew.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0FC1E978D50002A046F /* SomeoneNew.mp3 */; };
@@ -61,6 +65,11 @@
 		14955D301EBE8A4B000DB80E /* TabContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabContainer.xib; sourceTree = "<group>"; };
 		14955D331EBE8AD8000DB80E /* TabContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabContainer.swift; sourceTree = "<group>"; };
 		14955D391EBFBDC2000DB80E /* UIView+Timely.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Timely.swift"; sourceTree = "<group>"; };
+		14955D3B1EBFF2C4000DB80E /* PomodoroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
+		14955D3C1EBFF2C4000DB80E /* PomodoroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PomodoroViewController.xib; sourceTree = "<group>"; };
+		14955D401EBFF526000DB80E /* PomodoroTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroTimer.swift; sourceTree = "<group>"; };
+		14955D421EC01481000DB80E /* PomodoroState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroState.swift; sourceTree = "<group>"; };
+		14955D441EC02E0C000DB80E /* NSViewController+Timely.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSViewController+Timely.swift"; sourceTree = "<group>"; };
 		14ABE0BF1E973E6C002A046F /* Timely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14ABE0C21E973E6C002A046F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14ABE0C71E973E6C002A046F /* Timely.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Timely.xcdatamodel; sourceTree = "<group>"; };
@@ -75,7 +84,7 @@
 		14ABE0F01E9746D8002A046F /* TimelyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelyViewController.swift; sourceTree = "<group>"; };
 		14ABE0F11E9746D9002A046F /* TimelyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelyViewController.xib; sourceTree = "<group>"; };
 		14ABE0F41E974F5E002A046F /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
-		14ABE0F61E976C3F002A046F /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		14ABE0F61E976C3F002A046F /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		14ABE0F81E97854F002A046F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		14ABE0FA1E978B09002A046F /* Ping.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Ping.aiff; sourceTree = "<group>"; };
 		14ABE0FC1E978D50002A046F /* SomeoneNew.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SomeoneNew.mp3; sourceTree = "<group>"; };
@@ -123,6 +132,15 @@
 			name = TabContainer;
 			sourceTree = "<group>";
 		};
+		14955D3F1EBFF2D0000DB80E /* PomodoroView */ = {
+			isa = PBXGroup;
+			children = (
+				14955D3B1EBFF2C4000DB80E /* PomodoroViewController.swift */,
+				14955D3C1EBFF2C4000DB80E /* PomodoroViewController.xib */,
+			);
+			name = PomodoroView;
+			sourceTree = "<group>";
+		};
 		14ABE0B61E973E6B002A046F = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +171,7 @@
 				14ABE1181E9D88D8002A046F /* Alarm */,
 				14ABE11A1E9D88F4002A046F /* TimelyView */,
 				14ABE1191E9D88EB002A046F /* CountdownView */,
+				14955D3F1EBFF2D0000DB80E /* PomodoroView */,
 				14955D321EBE8AC4000DB80E /* TabContainer */,
 				14ABE0C91E973E6C002A046F /* Assets.xcassets */,
 				14ABE0CB1E973E6C002A046F /* Main.storyboard */,
@@ -160,6 +179,7 @@
 				14ABE0C61E973E6C002A046F /* Timely.xcdatamodeld */,
 				149444A11E9EE6E700E11DE4 /* StatusItemManager.swift */,
 				14955D391EBFBDC2000DB80E /* UIView+Timely.swift */,
+				14955D441EC02E0C000DB80E /* NSViewController+Timely.swift */,
 			);
 			path = Timely;
 			sourceTree = "<group>";
@@ -198,9 +218,11 @@
 		14ABE1171E9D88D0002A046F /* Timer */ = {
 			isa = PBXGroup;
 			children = (
-				14ABE0F61E976C3F002A046F /* Timer.swift */,
+				14ABE0F61E976C3F002A046F /* CountdownTimer.swift */,
+				14955D401EBFF526000DB80E /* PomodoroTimer.swift */,
 				14ABE1001E9CB727002A046F /* TimelyTimer.swift */,
 				14ABE10E1E9D827F002A046F /* TimeDuration.swift */,
+				14955D421EC01481000DB80E /* PomodoroState.swift */,
 			);
 			name = Timer;
 			sourceTree = "<group>";
@@ -350,6 +372,7 @@
 				14ABE0CA1E973E6C002A046F /* Assets.xcassets in Resources */,
 				14955D311EBE8A4B000DB80E /* TabContainer.xib in Resources */,
 				14ABE1091E9CCCDA002A046F /* CountdownViewController.xib in Resources */,
+				14955D3E1EBFF2C4000DB80E /* PomodoroViewController.xib in Resources */,
 				14ABE1131E9D86A2002A046F /* Basso.aiff in Resources */,
 				14ABE0CD1E973E6C002A046F /* Main.storyboard in Resources */,
 			);
@@ -377,18 +400,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				14955D3A1EBFBDC2000DB80E /* UIView+Timely.swift in Sources */,
+				14955D451EC02E0C000DB80E /* NSViewController+Timely.swift in Sources */,
 				149444A21E9EE6E700E11DE4 /* StatusItemManager.swift in Sources */,
-				14ABE0F21E9746D9002A046F /* TimelyViewController.swift in Sources */,
 				14ABE1011E9CB727002A046F /* TimelyTimer.swift in Sources */,
 				14ABE0F51E974F5E002A046F /* EventMonitor.swift in Sources */,
 				14ABE1081E9CCCDA002A046F /* CountdownViewController.swift in Sources */,
 				14ABE0C81E973E6C002A046F /* Timely.xcdatamodeld in Sources */,
-				14ABE0F71E976C3F002A046F /* Timer.swift in Sources */,
+				14ABE0F71E976C3F002A046F /* CountdownTimer.swift in Sources */,
 				14ABE1161E9D8864002A046F /* AlarmSound.swift in Sources */,
 				14ABE10F1E9D827F002A046F /* TimeDuration.swift in Sources */,
 				14955D341EBE8AD8000DB80E /* TabContainer.swift in Sources */,
 				14ABE0C31E973E6C002A046F /* AppDelegate.swift in Sources */,
+				14955D3D1EBFF2C4000DB80E /* PomodoroViewController.swift in Sources */,
+				14955D431EC01481000DB80E /* PomodoroState.swift in Sources */,
 				14ABE0FF1E98B937002A046F /* Alarm.swift in Sources */,
+				14955D411EBFF526000DB80E /* PomodoroTimer.swift in Sources */,
 				14ABE0F91E97854F002A046F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

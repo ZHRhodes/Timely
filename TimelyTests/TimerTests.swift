@@ -52,7 +52,7 @@ class TimerTests: XCTestCase {
 	}
 	
 	func testSettingUIDelegateAndUpdatingWithNewTime() {
-		let delegateSpy = TimerUIDelegateSpy()
+		let delegateSpy = TimerUpdateDelegateSpy()
 		let newTime: UInt = 1
 		countdownTimer.setDelegate(delegateSpy)
 		XCTAssert(countdownTimer.delegate != nil)
@@ -103,7 +103,7 @@ class TimerTests: XCTestCase {
 		}
 	}
 	
-	class TimerUIDelegateSpy: TimerUIDelegate {
+	class TimerUpdateDelegateSpy: TimerUpdateDelegate {
 		private(set) var timeHasBeenUpdated = false
 		private(set) var currentTime: UInt = 0
 		
