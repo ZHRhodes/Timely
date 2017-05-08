@@ -24,7 +24,6 @@
 		14ABE0CA1E973E6C002A046F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0C91E973E6C002A046F /* Assets.xcassets */; };
 		14ABE0CD1E973E6C002A046F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0CB1E973E6C002A046F /* Main.storyboard */; };
 		14ABE0E31E973E6C002A046F /* TimelyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0E21E973E6C002A046F /* TimelyUITests.swift */; };
-		14ABE0F31E9746D9002A046F /* TimelyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14ABE0F11E9746D9002A046F /* TimelyViewController.xib */; };
 		14ABE0F51E974F5E002A046F /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F41E974F5E002A046F /* EventMonitor.swift */; };
 		14ABE0F71E976C3F002A046F /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F61E976C3F002A046F /* CountdownTimer.swift */; };
 		14ABE0F91E97854F002A046F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ABE0F81E97854F002A046F /* Constants.swift */; };
@@ -81,8 +80,6 @@
 		14ABE0DE1E973E6C002A046F /* TimelyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14ABE0E21E973E6C002A046F /* TimelyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelyUITests.swift; sourceTree = "<group>"; };
 		14ABE0E41E973E6C002A046F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14ABE0F01E9746D8002A046F /* TimelyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelyViewController.swift; sourceTree = "<group>"; };
-		14ABE0F11E9746D9002A046F /* TimelyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelyViewController.xib; sourceTree = "<group>"; };
 		14ABE0F41E974F5E002A046F /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		14ABE0F61E976C3F002A046F /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		14ABE0F81E97854F002A046F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -123,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142C4B451EC0465F0071AB7E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14955D391EBFBDC2000DB80E /* UIView+Timely.swift */,
+				14955D441EC02E0C000DB80E /* NSViewController+Timely.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		14955D321EBE8AC4000DB80E /* TabContainer */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,20 +172,18 @@
 			children = (
 				14ABE0C21E973E6C002A046F /* AppDelegate.swift */,
 				14ABE0F81E97854F002A046F /* Constants.swift */,
+				149444A11E9EE6E700E11DE4 /* StatusItemManager.swift */,
 				14ABE0F41E974F5E002A046F /* EventMonitor.swift */,
 				14ABE1171E9D88D0002A046F /* Timer */,
 				14ABE1181E9D88D8002A046F /* Alarm */,
-				14ABE11A1E9D88F4002A046F /* TimelyView */,
 				14ABE1191E9D88EB002A046F /* CountdownView */,
 				14955D3F1EBFF2D0000DB80E /* PomodoroView */,
 				14955D321EBE8AC4000DB80E /* TabContainer */,
+				142C4B451EC0465F0071AB7E /* Extensions */,
 				14ABE0C91E973E6C002A046F /* Assets.xcassets */,
 				14ABE0CB1E973E6C002A046F /* Main.storyboard */,
 				14ABE0CE1E973E6C002A046F /* Info.plist */,
 				14ABE0C61E973E6C002A046F /* Timely.xcdatamodeld */,
-				149444A11E9EE6E700E11DE4 /* StatusItemManager.swift */,
-				14955D391EBFBDC2000DB80E /* UIView+Timely.swift */,
-				14955D441EC02E0C000DB80E /* NSViewController+Timely.swift */,
 			);
 			path = Timely;
 			sourceTree = "<group>";
@@ -244,15 +248,6 @@
 				14ABE1071E9CCCDA002A046F /* CountdownViewController.xib */,
 			);
 			name = CountdownView;
-			sourceTree = "<group>";
-		};
-		14ABE11A1E9D88F4002A046F /* TimelyView */ = {
-			isa = PBXGroup;
-			children = (
-				14ABE0F01E9746D8002A046F /* TimelyViewController.swift */,
-				14ABE0F11E9746D9002A046F /* TimelyViewController.xib */,
-			);
-			name = TimelyView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,7 +363,6 @@
 				14ABE1111E9D8669002A046F /* Glass.aiff in Resources */,
 				14ABE0FB1E978B09002A046F /* Ping.aiff in Resources */,
 				14ABE0FD1E978D50002A046F /* SomeoneNew.mp3 in Resources */,
-				14ABE0F31E9746D9002A046F /* TimelyViewController.xib in Resources */,
 				14ABE0CA1E973E6C002A046F /* Assets.xcassets in Resources */,
 				14955D311EBE8A4B000DB80E /* TabContainer.xib in Resources */,
 				14ABE1091E9CCCDA002A046F /* CountdownViewController.xib in Resources */,

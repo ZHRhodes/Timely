@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <tabView fixedFrame="YES" drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="wND-MD-bpE">
-                    <rect key="frame" x="0.0" y="0.0" width="225" height="86"/>
+                    <rect key="frame" x="4" y="4" width="217" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <font key="font" metaFont="system"/>
                     <tabViewItems>
@@ -54,6 +54,17 @@
                         </connections>
                     </segmentedCell>
                 </segmentedControl>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rJg-bk-mkC">
+                    <rect key="frame" x="7" y="88" width="19" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="recessed" title="X" bezelStyle="recessed" alignment="center" controlSize="mini" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ndB-cA-F71">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="systemBold" size="7"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="exitPressed:" target="-2" id="brz-BQ-SWP"/>
+                    </connections>
+                </button>
             </subviews>
             <point key="canvasLocation" x="-18.5" y="69"/>
         </customView>

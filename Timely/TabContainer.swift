@@ -28,4 +28,7 @@ class TabContainer: NSViewController {
 		tabView.selectTabViewItem(at: tabs.selectedSegment)
 	}
 	
+	@IBAction func exitPressed(_ sender: Any) {
+		NSApplication.shared().terminate(self)
+	}
 }
